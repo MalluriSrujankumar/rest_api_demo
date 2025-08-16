@@ -1,0 +1,63 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "api.restful-api.dev",
+  "basePath" : "",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/objects" : {
+      "get" : {
+        "tags" : [ "swagger" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "swagger",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/swagger"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "swagger##data" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "capacity" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "data" : {
+          "$ref" : "#/definitions/swagger##data"
+        }
+      }
+    }
+  }
+}
