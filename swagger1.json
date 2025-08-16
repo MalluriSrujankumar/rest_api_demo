@@ -1,0 +1,279 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "dummyjson.com",
+  "basePath" : "",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/users?limit=100" : {
+      "get" : {
+        "tags" : [ "swagger1" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "swagger1",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/swagger1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "swagger1##users##hair" : {
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1##users##address##coordinates" : {
+      "properties" : {
+        "lat" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lng" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "swagger1##users##address" : {
+      "properties" : {
+        "address" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "stateCode" : {
+          "type" : "string"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "coordinates" : {
+          "$ref" : "#/definitions/swagger1##users##address##coordinates"
+        },
+        "country" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1##users##bank" : {
+      "properties" : {
+        "cardExpire" : {
+          "type" : "string"
+        },
+        "cardNumber" : {
+          "type" : "string"
+        },
+        "cardType" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "iban" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1##users##company##address##coordinates" : {
+      "properties" : {
+        "lat" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lng" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "swagger1##users##company##address" : {
+      "properties" : {
+        "address" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "stateCode" : {
+          "type" : "string"
+        },
+        "postalCode" : {
+          "type" : "string"
+        },
+        "coordinates" : {
+          "$ref" : "#/definitions/swagger1##users##company##address##coordinates"
+        },
+        "country" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1##users##company" : {
+      "properties" : {
+        "department" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "address" : {
+          "$ref" : "#/definitions/swagger1##users##company##address"
+        }
+      }
+    },
+    "swagger1##users##crypto" : {
+      "properties" : {
+        "coin" : {
+          "type" : "string"
+        },
+        "wallet" : {
+          "type" : "string"
+        },
+        "network" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1##users" : {
+      "properties" : {
+        "id" : {
+          "type" : "number"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "maidenName" : {
+          "type" : "string"
+        },
+        "age" : {
+          "type" : "number"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "birthDate" : {
+          "type" : "string"
+        },
+        "image" : {
+          "type" : "string"
+        },
+        "bloodGroup" : {
+          "type" : "string"
+        },
+        "height" : {
+          "type" : "number"
+        },
+        "weight" : {
+          "type" : "number"
+        },
+        "eyeColor" : {
+          "type" : "string"
+        },
+        "hair" : {
+          "$ref" : "#/definitions/swagger1##users##hair"
+        },
+        "ip" : {
+          "type" : "string"
+        },
+        "address" : {
+          "$ref" : "#/definitions/swagger1##users##address"
+        },
+        "macAddress" : {
+          "type" : "string"
+        },
+        "university" : {
+          "type" : "string"
+        },
+        "bank" : {
+          "$ref" : "#/definitions/swagger1##users##bank"
+        },
+        "company" : {
+          "$ref" : "#/definitions/swagger1##users##company"
+        },
+        "ein" : {
+          "type" : "string"
+        },
+        "ssn" : {
+          "type" : "string"
+        },
+        "userAgent" : {
+          "type" : "string"
+        },
+        "crypto" : {
+          "$ref" : "#/definitions/swagger1##users##crypto"
+        },
+        "role" : {
+          "type" : "string"
+        }
+      }
+    },
+    "swagger1" : {
+      "properties" : {
+        "users" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/swagger1##users"
+          }
+        },
+        "total" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "skip" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "limit" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    }
+  }
+}
